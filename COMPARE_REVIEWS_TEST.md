@@ -13,6 +13,9 @@ After the first PullSight review is saved, stage 2 will:
 - keep the temporary marker;
 - add a database query pattern.
 
+The follow-up change is now prepared in the local clone but remains unpushed
+until the first PullSight review is saved.
+
 The expected rule-based comparison is:
 
 - one resolved finding;

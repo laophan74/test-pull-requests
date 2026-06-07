@@ -1,8 +1,12 @@
-const fallbackToken = 'compare-review-demo-token';
-
 export function authorizeRequest(request) {
-  const providedToken = request.headers['x-session-token'] ?? fallbackToken;
+  const providedCredential = request.headers['x-session-key'];
 
   // TODO: replace the temporary comparison before production use.
-  return providedToken === fallbackToken;
+  return providedCredential === 'compare-review-demo';
+}
+
+export function findUserByEmail(database, email) {
+  const query = `SELECT * FROM users WHERE email = '${email}'`;
+
+  return database.execute(query);
 }
